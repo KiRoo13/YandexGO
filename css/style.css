@@ -1035,6 +1035,10 @@ body {
   .regulations-content {
     padding: 48px 24px 100px 26px;
   }
+  .donload-btn {
+    padding: 24px 40px;
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -1049,10 +1053,6 @@ body {
 @media (max-width: 281px) {
   body {
     min-width: 960px;
-  }
-  .donload-btn {
-    padding: 24px 40px;
-    font-size: 15px;
   }
 }
 /*# sourceMappingURL=style.css.map */
