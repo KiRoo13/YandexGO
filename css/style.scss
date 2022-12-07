@@ -1,0 +1,908 @@
+$main-color: #ffde40;
+$black: #21201f;
+$white: #fff;
+$green: #00CA50;
+
+
+@mixin flexCentr   {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+@mixin flexSpace {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.main-container {
+   max-width: 960px;
+   padding: 0 17px;
+   margin: 0 auto;
+}
+
+
+body {
+   background: $main-color;
+   min-width: 960px;
+}
+
+// ---- HEADER -----------------------------------------------------
+
+.header {
+   width: 100%;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 100;
+   background-color: $main-color;
+}
+.header-container {
+   max-width: 1100px;
+   padding: 0 17px;
+   margin: 0 auto;
+}
+.header-content {
+   height: 80px;
+   @include flexSpace;
+   &__logo {
+      margin: 10px 0;
+      img {
+          height: 45px;
+      }
+   }
+   &__menu {
+      ul {
+         list-style-type: none;
+         padding: 0;
+         li {
+            display: inline-block;
+         }
+         li:not(:last-child) {
+            margin-right: 16px;
+         }
+      }
+      a {
+         text-decoration: none;
+         color: $black;
+         font-weight: 600;
+         font-size: 17px
+      }
+   }
+   &__btn {
+      background: $black;
+      color: #fff;
+      padding: 4px 51px;
+      border-radius: 18px;
+      height: 45px;
+      @include flexCentr;
+      a {
+         text-decoration: none;
+         color: $white;
+         font-size: 20px;
+         font-weight:  600;
+      }
+   }
+}
+
+// ---- / HEADER ---------------------------------------------------
+
+// ---- TITLE -----------------------------------------------------
+.title-content {
+   position: relative;
+   width: 100%;
+   padding-top: 160px;
+   text-align: start;
+   &__img {
+      width: 100%;
+   }
+   &__text {
+      max-width: 540px;
+      position: absolute;
+      bottom: 0;
+      font-weight: 900;
+      font-size: 36px;
+   }
+}
+
+// ---- / TITLE -----------------------------------------------------
+
+// ---- BTN-LOADED -----------------------------------------------------
+.btn {
+   height: 147px;
+}
+.donload-btn {
+   padding: 24px 64px;
+   background-color: $black;
+   color: $white;
+   text-decoration: none;
+   border-radius: 24px;
+   font-size: 24px;
+   height: 80px;
+   font-weight: 600;
+   &:hover {
+      color: #eceaea;
+      transition: .4s;
+   }
+}
+.main-container_hight {
+   padding-top: 126px;
+   height: 100%;
+}
+
+// ---- / BTN-LOADED -----------------------------------------------------
+
+// ---- LOCATION -----------------------------------------------------
+
+.main-container_padding {
+   padding: 0;
+}
+.location-content {
+   width: 100%;
+   position: relative;
+   font-size: 64px;
+   font-weight: 900;
+   padding-top: 65px;
+   color: $white;
+   &__img-top {
+      position: absolute;
+      top: 25px;
+      right: calc(50% - 360px);
+   }
+   &__img-bottom {
+      width: 100%;
+      position: absolute;
+      left: 28px;
+      bottom: -50px;
+   }
+   a {
+      color: $white;
+   }
+}
+
+// ---- / LOCATION -----------------------------------------------------
+
+// ---- RENT -----------------------------------------------------
+.rent-content {
+   padding-top: 128px;
+   h1 {
+      font-weight: 900;
+      font-size: 64px;
+   }
+}
+.rent-cards {
+   width: 100%;
+   display: flex;
+   position: relative;
+   flex-direction: column;
+   padding-top: 96px;
+   &__card {
+      font-size: 36px;
+      margin-top: 32px;
+      max-width: 455px;
+      font-weight: 900;
+   }
+}
+.rent-video {
+   position: absolute;
+   top: 130px;
+   left: calc(50% + 120px);
+   right: 0;
+   max-width: 360px;
+   min-height: 645px;
+   border-radius: 56px;
+}
+.rent_img-dec {
+   position: absolute;
+   left: calc(50% - 93px);
+   bottom: -93px;
+}
+.mob-img {
+   display: none;
+}
+.rent-video_mod {
+   display: none;
+}
+// ---- / RENT -----------------------------------------------------
+
+// ---- BTN-READY -----------------------------------------------------
+.btn-ready {
+   height: 188px;
+}
+.ready-btn {
+   text-decoration: none;
+   color: $white;
+   font-size: 40px;
+   font-weight: 900;
+   @include flexCentr;
+   text-align: center;
+   width: 100%;
+   height: 100%;
+   background: $black;
+   border-radius: 56px;
+}
+
+// ---- / BTN-READY -----------------------------------------------------
+
+// ----  TARIFF -----------------------------------------------------
+.tariff-content {
+   position: relative;
+   width: 100%;
+   padding-top: 48px;
+}
+.slide-wrapp {
+   @include flexSpace;
+   flex-wrap: wrap;
+   padding-top: 50px;
+}
+.tariff-card {
+   flex: 0 0 48%;
+   border: 5px solid #21201f;
+   padding: 72px 56px;
+   height: 396px;
+   box-sizing: border-box;
+   border-radius: 56px;
+   h3 {
+    margin: 30px 0px;
+    font-size: 36px;
+    font-weight: 900;
+   }
+   p {
+      margin: 0;
+      font-style: 22px;
+      font-weight: 600;
+      line-height: 120%;
+   }
+}
+.dote_mob {
+   display: none
+}
+.flex {
+   @include  flexSpace;
+   img {
+      width: 85px;
+   }
+}
+.subscription-content_img-mod {
+   display: none;
+   width: 85px;
+}
+.tariff-card_black {
+   width: 680px;
+   background-color: $black;
+   color: $white;
+   margin-top: 34px;
+}
+.tariff-card_marg {
+   margin-top: 170px;
+}
+.tariff-card_border {
+   border: 5px dashed #21201f;
+}
+.tariff-card_background-img {
+   width: 48%;
+   position: absolute;
+   right: 0;
+   top: 55%;
+   border: none;
+   background-image: url('https://avatars.mds.yandex.net/get-lpc/1368426/10c1c55d-f843-434c-9caf-57c59dfa7cd5/orig');
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+.tariff-card_img {
+   position: absolute;
+   border: none;
+   right: 0;
+   width: 450px;
+   height: 450px;
+   bottom: -15%;
+   border: 5px solid #21201f;
+   background-image: url('https://avatars.mds.yandex.net/get-lpc/1674605/57e4c449-5c91-4cf1-89bf-1643586d68fc/orig');
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+// ---- / TARIFF -----------------------------------------------------
+
+// ----  SUBSCRIPTION -----------------------------------------------------
+.subscription {
+   margin-top: 320px;
+   padding-top: 128px;
+   padding-bottom: 150px;
+   background-image: url('https://avatars.mds.yandex.net/get-lpc/1220100/8afabd62-3e5f-48b5-862d-1aca76d42ef6/orig');
+   background-repeat: no-repeat;
+   background-size: 100%;
+   background-position: bottom;
+   border-radius: 56px 56px 0 0;
+   background-color: $white;
+}
+.subscription-content {
+   position: relative;
+   h3 {
+      font-weight: 900;
+      font-size: 84px;
+      line-height: 88px;
+      color: $black;
+      max-width: 600px;
+   }
+   > p {
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 130%;
+      color: $black;
+      margin-top: 32px;
+      max-width: 700px;
+   }
+   &__advantage {
+      @include flexSpace;
+      h4 {
+         font-weight: 900;
+         font-size: 32px;
+         line-height: 100%;
+         color: $black;
+         margin-bottom: 0;
+      }
+      p {
+         margin: 0;
+         font-weight: 600;
+         font-size: 22px;
+         line-height: 130%;
+         color: $black;
+         margin-top: 8px;
+      }
+   }
+}
+.subscription-content_img-desc {
+   width: 85px;
+   position: absolute;
+   right: 0;
+   top: -50px;
+   left: 60%;
+   width: 513px;
+   height: auto;
+   margin-left: 30px;
+}
+.padding-top  {
+   position: relative;
+   bottom: 50px;
+   width: 100%;
+   height: 128px;
+   background: #ffde40;
+   border-radius: 56px 56px 0 0;
+}
+// ---- / SUBSCRIPTION -----------------------------------------------------
+
+// ----  SLIDER -----------------------------------------------------
+.slider-wrapper {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-end;
+   flex-direction: column;
+   position: relative;
+}
+.slider-content {
+   width: 734px;
+   height: 414px;
+   border-radius: 32px;
+   overflow: hidden;
+   display: flex;
+}
+.slider_item {
+   width: 100%;
+   height: 100%;
+}
+.slider-dote {
+   margin: 0 auto;
+   position: absolute;
+   bottom: -40px;
+   left: 65%;
+   span {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: rgba(128, 128, 128, 1);
+   }
+   span:hover {
+      cursor: pointer;
+      transition: .4s;
+      background-color: $black;
+   }
+}
+.main-container_width {
+   max-width: 1100px;
+}
+// ---- / SLIDER -----------------------------------------------------
+
+// ----  REGULATIONS -----------------------------------------------------
+.regulations-content {
+   background: $white;
+   padding: 56px 56px 177px 93px;
+   border-radius: 56px 56px 56px 56px;
+   margin-top: -68px;
+   color: $black;
+   &__title {
+      max-width: 100%;
+      text-align: start;
+      font-size: 64px;
+      margin-bottom: 72px;
+      font-weight: 900;
+      line-height: 110%;
+  }
+  &__live {
+     width: 475px;
+     bottom: 0;
+     left: 45%;
+     background: $green;
+     position: absolute;
+     padding: 83px;
+     border-radius: 56px;
+     p {
+      font-size: 32px;
+      color: $white;
+      line-height: 130%;
+      font-weight: 600;
+     }
+  }
+}
+.regulations-cards {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-wrap: wrap;
+   &__item {
+      flex: 0 0 48%;
+      margin-bottom: 96px;
+      img {
+         margin-bottom: 24px;
+      }
+      h5 {
+         font-size: 36px;
+         font-weight: 900;
+         line-height: 110%;
+         margin: 0;
+         margin-bottom: 16px;
+      }
+      p {
+         font-size: 22px;
+         font-weight: 600;
+         max-width: 343px;
+      }
+   }
+}
+.div-dec {
+   position: relative;
+   height: 430px;
+}
+// ---- / REGULATIONS -----------------------------------------------------
+
+// ----  MAP -----------------------------------------------------
+   .map {
+      background: $white;
+      border-radius: 56px 56px 0 0;
+      margin-top: 56px;
+   }
+   .map-content {
+      padding-top: 128px;
+      h4 {
+         font-size: 64px;
+         margin: 0;
+         margin-bottom: 32px;
+         font-weight: 900;
+      }
+      p {
+         font-size: 32px;
+         line-height: 130%;
+         margin-bottom: 72px;
+         font-weight: 600;
+      }
+      img {
+         width: 100%;
+         border-radius: 56px;
+      }
+   }
+   .map-qr {
+      margin-top: 128px;
+      h4 {
+         font-size: 64px;
+         margin-bottom: 32px;
+         max-width: 455px;
+         font-weight: 900;
+      }
+      p {
+         font-size: 32px;
+         line-height: 130%;
+         max-width: 455px;
+         font-weight: 600;
+         padding-bottom: 48px;
+         margin: 0;
+      }
+   }
+   .map-phone {
+      width: 100%;
+      padding-top: 130px;
+      position: relative;
+      &__block-yellow {
+         position: absolute;
+         bottom: 0;
+         width: 100%;
+         height: 100px;
+         background-color: $main-color;
+         border-radius: 56px 56px 0 0;
+         z-index: 10;
+      }
+      &__block-black {
+         position: absolute;
+         bottom: 0;
+         right: 0;
+         width: 50%;
+         height: 170px;
+         background-color: $black;
+         border-radius: 56px 56px 0 0;
+      }
+      &__video {
+        position: absolute;
+        bottom: -116px;
+        left: 55%;
+        z-index: 50;
+        width: 360px;
+        border-radius: 56px 56px 56px 56px;
+        overflow: hidden;
+         video {
+            width: 100%;
+            height: 100%;
+          }
+      }
+   }
+
+// ---- / MAP -----------------------------------------------------
+
+// ----  FOOTER -----------------------------------------------------
+.footer-content {
+   padding-top: 56px;
+   padding-bottom: 56px;
+}
+.footer-content {
+   display: flex;
+   justify-content: space-between;
+   p {
+      font-size: 13px;
+      line-height: 16px;
+      color: $black;
+      font-weight: 600;
+      max-width: 600px;
+      a {
+         text-decoration: none;
+      }
+   }
+   span {
+    font-size: 13px;
+    line-height: 16px;
+    color: $black;
+    font-weight: 600;
+    max-width: 600px;
+   }
+}
+.footer {
+   background: #fafafa;
+   position: relative;
+   z-index: 70;
+}
+.btn-mob {
+   display: none;
+   background: $black;
+   color: $white;
+   padding: 17px 30px 17px 30px;
+   border-radius: 53px;
+}
+// ---- / FOOTER -----------------------------------------------------
+
+// АДАПТИВ ------------------------------------------------
+@media (max-width: 1100px) {
+   .header-content__menu ul {
+    max-width: 500px;
+    text-align: center;
+   }
+}
+
+@media (max-width: 768px) {
+   .header-content__menu  {
+      display: none;
+  }
+  body {
+   min-width: 0px;
+  }
+  .header-content {
+   justify-content: space-between;
+  }
+  .rent-video {
+   width: 100%;
+   top: 0;
+   left: 0;
+  }
+  .title-content__text {
+   position: static;
+  }
+  .subscription-content_img-desc {
+   display: none;
+  }
+  .subscription-content_img-mod {
+   display: block;
+   width: 100%;
+  }
+  .flex {
+   flex-direction: column;
+   align-items: flex-start;
+   h3 {
+      order: 2;
+   }
+  }
+  .tariff-card {
+   p {
+      margin-bottom: 20px;
+   }
+  }
+  .subscription {
+   margin-left: 17px;
+   margin-right: 17px;
+   border-radius: 56px 56px 56px 56px;
+  }
+  .footer-content {
+   flex-direction: column;
+  }
+  .regulations-content {
+   padding: 56px 56px 56px 93px;
+  }
+  .main-container_width  {
+   padding-bottom: 122px;
+   padding-top: 35px;
+  }
+  .regulations-cards {
+   position: relative;
+   flex-direction: column;
+   align-items: flex-start;
+  }
+  .slider-dote {
+   left: 45%;
+  }
+  .subscription-content {
+   h3 {
+      font-size: 48px;
+      line-height: 53px;
+   }
+  }
+  .subscription-content__advantage {
+   flex-direction: column;
+   align-items: flex-start;
+  }
+  .padding-top {
+   display: none;
+  }
+  .location-content {
+   font-size: 48px;
+  }
+  .location-content {
+   width: 95%;
+  }
+  .rent_img-dec {
+     display: none;
+  }
+  .rent-cards__card__img {
+   width: 100%;
+  }
+  .mob-img {
+   display: block;
+   position: absolute;
+   bottom: -76px;
+   left: 15%;
+   width: 218px;
+   display: block;
+  }
+  .wid {
+   max-width: 200px;
+  }
+  .ready-btn {
+   padding: 24px;
+   font-size: 33px;
+  }
+  .ready-btn {
+   height: 50px;
+  }
+  .tariff-card_background-img  {
+   position: static;
+  }
+  .tariff-card_img {
+   position: static;
+   background-position: bottom;
+   background-size: cover;
+  }
+  .donload-btn {
+   padding: 24px 44px;
+  }
+  .ready-btn {
+   font-size: 20px;
+  }
+  .regulations-content__title {
+   font-size: 40px;
+  }
+  .slide-wrapp {
+   flex-wrap: nowrap;
+  }
+  .tariff-card_marg {
+   margin-top: 0;
+  }
+  .slide-see {
+   position: relative;
+   width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-bottom: 40px;
+  }
+  .dote_mob {
+   display: block;
+   position: absolute;
+   left: 45%;
+   bottom: 0px;
+   span {
+      display: inline-block;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background-color: rgba(128, 128, 128, 1);
+   }
+  }
+  .wrapper-mob {
+   display: flex;
+   position: relative;
+   flex-direction: column;
+   align-items: center;
+   div {
+      width: 100%;
+   }
+  }
+  .tariff-card_img {
+   min-height: 640px;
+  }
+  .tariff-card_black {
+   position: absolute;
+   top: calc(49% + 400px);
+   margin: 0;
+   bottom: 0;
+   order: 2;
+   > h3 {
+      margin: 0;
+      margin-bottom: 10px;
+   }
+  }
+  .subscription {
+   margin-top: 225px;
+  }
+  .subscription-content {
+   h3 {
+      margin: 0;
+   }
+   p {
+      font-size: 25px;
+   }
+  }
+  .location-content {
+   padding-left: 17px;
+  }
+  .regulations-content__live {
+   width: 100%;
+   padding: 0;
+   bottom: 0;
+   left: 0;
+   img {
+      padding: 21px;
+   }
+   p {
+      padding: 45px;
+      margin: 0;
+      font-size: 21px;
+   }
+  }
+  .div-dec {
+   height: 210px;
+  }
+  .tariff-card {
+   flex-basis: 100%;
+   height: 238px;
+   padding: 35px;
+   margin-top: 15px;
+  }
+  .tariff-card_background-img {
+   margin-bottom: 16px;
+  }
+  .slider-content {
+   width: 100%;
+   height: 100%;
+  }
+  .btn-mob {
+   width: 50%;
+   display: flex;
+   @include flexCentr;
+   margin-top: 38px;
+  }
+  .ready-btn {
+   width: 90%;
+  }
+  .location-content__img-bottom {
+   width: 90%;
+  }
+  .location-content__img-top {
+   display: none;
+  }
+  .map-qr {
+   display: none;
+  }
+  .rent-video {
+   display: none;
+  }
+  .rent-video_mod {
+   display: block;
+   width: 100%;
+   border-radius: 20px;
+   overflow: hidden;
+   video {
+      width: 100%;
+   }
+  }
+  .tariff-card {
+   padding: 27px;
+  }
+  .map-phone {
+   display: none;
+  }
+  .daw {
+   height: 100%;
+   display: block;
+   h3 {
+      margin: 0;
+      margin-bottom: 10px;
+   }
+   p {
+      width: 100%;
+   }
+  }
+  .header-content__btn {
+   padding: 4px 35px;
+  }
+  .rent-video_mod {
+   width: 99%;
+  }
+  .rent-content h1 {
+   font-size: 44px;
+   padding-bottom: 30px;
+  }
+  .regulations-cards__item {
+   display: none;
+  }
+  .regulations-cards__item_mob {
+   display: block;
+  }
+  .dote_mob_position {
+   bottom: 88px;
+  }
+}
+
+@media (max-width: 550px) {
+   .regulations-content {
+      padding: 48px 24px 100px 26px;
+   }
+}
+
+@media (max-width: 500px) {
+   .mob-img {
+      left: 29%;
+   }
+   .regulations-content__live {
+      bottom: -40px;
+   }
+}
+
+
+@media (max-width: 278px) {
+    body {
+      min-width: 960px;
+    }
+}
