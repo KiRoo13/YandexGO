@@ -1046,9 +1046,13 @@ body {
   }
 }
 
-@media (max-width: 278px) {
+@media (max-width: 27978px) {
   body {
     min-width: 960px;
+  }
+  .donload-btn {
+    padding: 24px 40px;
+    font-size: 15px;
   }
 }
 /*# sourceMappingURL=style.css.map */
